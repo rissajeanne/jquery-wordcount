@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>JQuery Word Count Demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+<script src="/code/jquery.wordcount.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$('#wordLimit').wordCount();
+
+	$('#wordLimit50').wordCount({
+		'limit' 	: '50',
+		'showElem'	: 'span'
+	});
+});
+</script>
+</head>
+<body>
+
+<p>This textarea has the default limit of 100 words:</p>
+<pre><code>
+$('#wordLimit').wordCount();
+</code></pre>
+<textarea id="wordLimit" cols="50" rows="5"></textarea>
+
+<p>This textarea has a user-supplied word limit of 50:</p>
+<pre><code>
+$('#wordLimit50').wordCount({
+	'limit' 	: '50',
+	'showElem'	: 'span'
+});
+</code></pre>
+<textarea id="wordLimit50" cols="50" rows="5"></textarea>
+
+</body>
+</html>
